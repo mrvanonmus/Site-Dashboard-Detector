@@ -14,7 +14,7 @@ $ git clone https://github.com/mrvanonmus/Site-Dashboard-Detector
 ```
 $ cd Site-Dashboard-Detector
 
-$ cmhod 777 SDD.py
+$ chmod 777 SDD.py
 
 $ python2 SDD.py
 ```
