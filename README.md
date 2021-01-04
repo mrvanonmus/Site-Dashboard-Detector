@@ -1,6 +1,5 @@
 # Site-Dashboard-Detector
-للعثور على لوحة تحكم موقع باستخدام Python
-
+Extract the site control panel with Python 
 
 # [التثبيت] 
 ```
