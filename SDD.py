@@ -1,2 +1,40 @@
-import base64
-exec(base64.b32decode("IyEvdXNyL2Jpbi9lbnYgcHl0aG9uCiMgLSotIGNvZGluZzogVVRGLTggLSotCgpmcm9tIHVybGxpYjIgaW1wb3J0IFJlcXVlc3QsIHVybG9wZW4sIFVSTEVycm9yLCBIVFRQRXJyb3IKCmRlZiBTcGFjZShqKToKCWkgPSAwCgl3aGlsZSBpPD1qOgoJCXByaW50ICIgIiwKCQlpKz0xCgoKZGVmIGZpbmRBZG1pbigpOgoJZiA9IG9wZW4oIkZpbGUtYXR0ZW1wdHMudHh0IiwiciIpOwoJbGluayA9IHJhd19pbnB1dCgiRW50ZXIgU2l0ZSBOYW1lIFxuKGV4IDogZXhhbXBsZS5jb20gb3Igd3d3LmV4YW1wbGUuY29tICk6ICIpCglwcmludCAiXG5cbkF2aWxhYmxlIGxpbmtzIDogXG4iCgl3aGlsZSBUcnVlOgoJCXN1Yl9saW5rID0gZi5yZWFkbGluZSgpCgkJaWYgbm90IHN1Yl9saW5rOgoJCQlicmVhawoJCXJlcV9saW5rID0gImh0dHA6Ly8iK2xpbmsrIi8iK3N1Yl9saW5rCgkJcmVxID0gUmVxdWVzdChyZXFfbGluaykKCQl0cnk6CgkJCXJlc3BvbnNlID0gdXJsb3BlbihyZXEpCgkJZXhjZXB0IEhUVFBFcnJvciBhcyBlOgoJCQljb250aW51ZQoJCWV4Y2VwdCBVUkxFcnJvciBhcyBlOgoJCQljb250aW51ZQoJCWVsc2U6CgkJCXByaW50ICJPSyA9PiAiLHJlcV9saW5rCgpkZWYgQ3JlZGl0KCk6CglTcGFjZSg5KTsgcHJpbnQgIiMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMiCglTcGFjZSg5KTsgcHJpbnQgIiMgKysrICAgU2l0ZSBEYXNoYm9hcmQgRGV0ZWN0b3IgKysrICMiCglTcGFjZSg5KTsgcHJpbnQgIiMgICAgIFNjcmlwdCBieSBtcnYgc3lyaWEgICAgICAgICAgICMiCglTcGFjZSg5KTsgcHJpbnQgIiMgICAgQmFuZ2xhZGVzaCBCbGFjayBIYXQgSGFja2VycyAgICMiCglTcGFjZSg5KTsgcHJpbnQgIiMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMiCgpDcmVkaXQoKQpmaW5kQWRtaW4oKQ") 
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+from urllib2 import Request, urlopen, URLError, HTTPError
+
+def Space(j):
+	i = 0
+	while i<=j:
+		print " ",
+		i+=1
+
+
+def findAdmin():
+	f = open("File-attempts.txt","r");
+	link = raw_input("Enter Site Name \n(ex : example.com or www.example.com ): ")
+	print "\n\nAvilable links : \n"
+	while True:
+		sub_link = f.readline()
+		if not sub_link:
+			break
+		req_link = "http://"+link+"/"+sub_link
+		req = Request(req_link)
+		try:
+			response = urlopen(req)
+		except HTTPError as e:
+			continue
+		except URLError as e:
+			continue
+		else:
+			print "OK => ",req_link
+
+def Credit():
+	Space(9); print "#####################################"
+	Space(9); print "# +++   Site Dashboard Detector +++ #"
+	Space(9); print "#     Script by mrv syria           #"
+	Space(9); print "#    Bangladesh Black Hat Hackers   #"
+	Space(9); print "#####################################"
+
+Credit()
+findAdmin()
