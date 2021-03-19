@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: UTF-8 -*-
-
+import os, time, sys
+os.system('clear')
+print '\x1b[1;32m'
 from urllib2 import Request, urlopen, URLError, HTTPError
 
 def Space(j):
@@ -12,7 +14,7 @@ def Space(j):
 
 def findAdmin():
 	f = open("File-attempts.txt","r");
-	link = raw_input("Enter Site Name \n(ex : example.com or www.example.com ): ")
+	link = raw_input("Enter Site Name \n(ex : example.com or www.example.com ) => ")
 	print "\n\nAvilable links : \n"
 	while True:
 		sub_link = f.readline()
@@ -28,7 +30,18 @@ def findAdmin():
 			continue
 		else:
 			print "OK => ",req_link
+x = '_____________=︻╦╤─ WELCOME TO MAY SCRIPT RAYANE GRAICHI ─╤╦︻=________________\nTHIS SECRIPT FISHING \nDATE:2021/3/16\nNAME:Alhamwi \nWEB SIT:HTTPS://RAYANEGRAICHI.BLOGSPOT.COM\n'
+for i in x:
+    sys.stdout.write(i)
+    sys.stdout.flush()
+    time.sleep(0.06)
+    animation = '|/-\\'
+for i in range(60):
+    time.sleep(0.1)
+    sys.stdout.write('\r\x1b[32;1m[\x1b[37;1m+\x1b[32;1m]\x1b[37;1m LOADING.\x1b[32;1m' + animation[(i % len(animation))])
+    sys.stdout.flush()
 
+print ' '
 def Credit():
 	Space(9); print "#####################################"
 	Space(9); print "# +++   Site Dashboard Detector +++ #"
